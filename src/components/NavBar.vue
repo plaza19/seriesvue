@@ -14,9 +14,9 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <router-link to="/" class="navbar-item">
         Home
-      </a>
+      </router-link>
 
       <a class="navbar-item">
         Nuevo Personaje
@@ -32,9 +32,9 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item" v-for="serie in series" :key="serie">
+          <router-link :to="'/detalleserie/' + serie.idSerie" class="navbar-item" v-for="serie in series" :key="serie">
             {{serie.nombre}}
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
